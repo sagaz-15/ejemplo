@@ -13,4 +13,19 @@ public class Matriz {
         }
         return numeros;
     }
+
+    public double CalcularPromedio(int[][] numeros, int n, int m) {
+        double acum=0, prom;
+        int cont=0;
+        for(int i=0;i<numeros.length;i++){
+            for(int j=0;j<numeros.length;j++){
+                if((j+i)%2==0){
+                    acum+=numeros[i][j];
+                    cont++;
+                }
+            }
+        }
+        prom=acum/cont;
+        return prom;
+    }
 }
