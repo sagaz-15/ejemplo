@@ -25,5 +25,9 @@ public class Main {
         prom=matrices.CalcularPromedio(numeros,n,m);
 
         System.out.println("Matriz promedio de los elementos (i+j) pares son: "+prom);
+
+        for (int i = 0; i < 20; i++) {
+            System.out.println("FEIN FEIN FEIN FEIN FEIN");
+        }
     }
 }
