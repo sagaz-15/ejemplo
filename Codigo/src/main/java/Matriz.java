@@ -11,5 +11,6 @@ public class Matriz {
                 System.out.println(numeros[i][j]+"  ");
             }
         }
+        return numeros;
     }
 }
