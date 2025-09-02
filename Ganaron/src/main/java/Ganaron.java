@@ -15,12 +15,22 @@ public class Ganaron {
     }
 
     //crear un vector con las notas mayores o iguales a 3
-    public int[][] crearVector(float[][] notas, int n){
-        int[][] vector = new int[n][n];
+    public int[] crearVector(float[][] notas, int n){
+        int cont=0;
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
-                if (notas[i][j]>=3.0){
-                    vector[i][j]=(int) notas[i][j];
+                if (notas[i][j] >= 3.0){
+                    cont++;
+                }
+            }
+        }
+
+        int[] vector = new int[cont];
+        int idx = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (notas[i][j] >= 3.0) {
+                    vector[idx++] = (int) notas[i][j]; // guarda la nota truncada
                 }
             }
         }
